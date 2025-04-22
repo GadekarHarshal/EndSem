@@ -25,3 +25,15 @@ created >= -30d AND resolutionDate <= created +7d
 
 Created in the last 30 days
 And resolved within 7 days after their creation date
+
+
+
+due >= "2025-03-01" AND due <= "2025-03-15"
+status in ("To Do", "In Progress", "In Review")
+status = "In Progress"
+
+
+status CHANGED FROM "In Progress" TO "Done" AFTER "2024-03-01"
+(text ~ "bug fix")
+status = Done AND assignee = currentUser() AND status CHANGED TO Done DURING (startOfMonth(-1), endOfMonth(-1))
+status CHANGED FROM "In Progress" TO "Done" AFTER "2024-03-01" AND assignee = username
