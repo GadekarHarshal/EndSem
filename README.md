@@ -37,3 +37,44 @@ status CHANGED FROM "In Progress" TO "Done" AFTER "2024-03-01"
 (text ~ "bug fix")
 status = Done AND assignee = currentUser() AND status CHANGED TO Done DURING (startOfMonth(-1), endOfMonth(-1))
 status CHANGED FROM "In Progress" TO "Done" AFTER "2024-03-01" AND assignee = username
+
+
+
+
+
+
+You’ve updated a project file locally and need to  push the changes to 
+GitHub. What Git commands would you use to stage, commit, and push the 
+changes? 
+cd ~/Documents/hello-project
+
+cd hello-project
+git init
+git add 
+git commit -m "Initial commit"
+git remote add origin https://github.com/GadekaerHarshal/hello-project.git
+git push -u origin main
+
+
+
+
+ InvoiceApp
+ 
+ cd ~/Documents/InvoiceApp
+ 
+ If you haven’t created it yet:
+mkdir ~/Documents/InvoiceApp
+cd ~/Documents/InvoiceApp
+git init
+
+Create a new repository on GitHub
+Copy the remote URL from GitHub (it will look like this):
+git remote add origin https://github.com/GadekaerHarshal/InvoiceApp.git 
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+
+If it says "main" doesn’t exist, you can rename the branch:
+
+git branch -M main
+git push -u origin main
